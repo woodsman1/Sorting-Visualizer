@@ -1,0 +1,30 @@
+{
+  "name": "react_webpack_starter",
+  "version": "1.0.0",
+  "description": "Boilerplates for react apps",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot --port 3000",
+    "built": "webpack --mode production"
+  },
+  "author": "Mr.X",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "serve": "^11.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
