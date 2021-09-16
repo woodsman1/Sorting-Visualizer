@@ -12,9 +12,7 @@ const Sorting = () => {
             Hello Testing
 
             <div className="graph-area"></div>
-
-
-            <ControlBar No_sample={No_sample} Algo={Algo}/>
+            <ControlBar No_sample={No_sample} Algo={Algo} setAlgo={setAlgo} setSample={setSample}/>
         </>
     )
 }

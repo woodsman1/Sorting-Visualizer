@@ -10,10 +10,11 @@
 .innerControlBar{
     padding: 10px;
     padding-top: 20px;
+    width: 100%;
 }
 
 .white-text{
-    color: azure;
+    color: azure !important;
 }
 
 .graph-area{
@@ -34,4 +35,36 @@
 .selection-list{
     padding-top: 18px;
     padding-left: 20px;
+    float: left;
+}
+
+.same-horizon{
+    float: left;
+}
+
+.sample-range{
+    background-color: #100c08;
+    padding-top: 18px;
+    padding-left: 150px;
+}
+
+.label-custom{
+    margin-right: 20px;
+}
+
+.range-bar{
+    width: 300px;
+    margin-top: 10px;
+}
+
+.sort-button{
+    float: right !important;
+    padding-top: 18px;
+    padding-right: 50px;
+    
+}
+
+.sort-button:hover{
+    cursor: pointer;
+    color: green !important;
 }
