@@ -25,7 +25,7 @@ const Sorting = () => {
         const temp_sample_list = [];
 
         for(let i=0; i<No_sample; i++){
-            temp_sample_list.push(getRandomInteger(0, fixed_height));
+            temp_sample_list.push(getRandomInteger(1, fixed_height));
         }
         setSampleList(temp_sample_list);
     }
