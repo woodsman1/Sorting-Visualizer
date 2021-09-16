@@ -18,7 +18,7 @@
 }
 
 .graph-area{
-    height: 85vh;
+    height: 86.2vh;
 }
 
 .open-up{
@@ -67,4 +67,25 @@
 .sort-button:hover{
     cursor: pointer;
     color: green !important;
+}
+
+
+.visualizing-area{
+    position: -webkit-sticky;
+    position: sticky;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 75vh;
+}
+
+.hr-styling{
+    margin-left: 4%;
+    margin-right: 5%;
+    margin-bottom: 1px;
+    margin-bottom: 2px;
+}
+
+.vertical-bars{
+    float: left;
+    outline: 0.5px solid rgb(26, 33, 34);
 }

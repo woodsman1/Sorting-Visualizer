@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
+const ControlBar = ({No_sample, Algo, setAlgo, setSample, onGenerate}) => {
 
     const sort_options =[
         "Bubble Sort",
@@ -21,7 +21,7 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
         setCompSample(parseInt(e.target.value, 10));
     }
 
-    const onGenerate = () =>{
+    const setonGenerate = () =>{
         setSample(comp_sample);
     }
 
@@ -40,7 +40,7 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
                 </div>
 
                 <div className="white-text  same-horizon sample-range">
-                    <label for="customRange2" className="form-label label-custom">Sample Size </label>
+                    <label htmlFor="customRange2" className="form-label label-custom">Sample Size </label>
                     <input 
                         type="range" 
                         className="form-range range-bar" 
@@ -59,7 +59,7 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
 
                 <div 
                     className="white-text same-horizon sort-button"
-                    onClick={onGenerate}>
+                    onClick={setonGenerate}>
                     <p> GENERATE </p>
                 </div>
 
