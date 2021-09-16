@@ -26,7 +26,8 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample, onSort}) => {
     }
 
     const onClickSort = () => {
-        onSort();
+        setAlgo(index_Algo);
+        onSort(index_Algo);
     }
 
     return (
