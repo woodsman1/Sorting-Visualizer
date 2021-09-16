@@ -13,14 +13,16 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
     const [index_Algo, setAlgoIndex] = useState(Algo);
     const [comp_sample, setCompSample] = useState(No_sample);
 
-    const handleChange = (e) => {
+    const changeAlgo = (e) => {
         setAlgoIndex(parseInt(e.target.value, 10) );
-        console.log(e.target.value);
     }
 
     const changeRange = (e) => {
         setCompSample(parseInt(e.target.value, 10));
-        console.log(e.target.value);
+    }
+
+    const onGenerate = () =>{
+        setSample(comp_sample);
     }
 
     return (
@@ -28,7 +30,7 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
 
             <div className="innerControlBar same-horizon">
                 <div className="selection-list">
-                    <select className = "open-up" onChange={handleChange} value={index_Algo}>
+                    <select className = "open-up" onChange={changeAlgo} value={index_Algo}>
                         <option value="0">{sort_options[0]}</option>  
                         <option value="1">{sort_options[1]}</option>
                         <option value="2">{sort_options[2]}</option>
@@ -51,13 +53,13 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample}) => {
 
                 <div 
                     className="white-text same-horizon sort-button"
-                    onClick={}>
+                    >
                     <p > SORT </p>
                 </div>
 
                 <div 
                     className="white-text same-horizon sort-button"
-                    onClick={}>
+                    onClick={onGenerate}>
                     <p> GENERATE </p>
                 </div>
 
