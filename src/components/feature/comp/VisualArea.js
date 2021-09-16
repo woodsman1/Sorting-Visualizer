@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import VerticalBars from './comp/VerticalBars'
 
 const VisualArea = ({No_sample, list_sample, sampleWidth}) => {
-    
+
     return (
         <>
             <div className="graph-area">

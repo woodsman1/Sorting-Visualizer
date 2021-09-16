@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { BubbleSort } from './comp/algos/BubbleSort';
 import ControlBar from './comp/ControlBar';
 import VisualArea from './comp/VisualArea';
+
 
 const Sorting = () => {
 
@@ -14,7 +16,15 @@ const Sorting = () => {
     useEffect(() => {
         onGenerate();
     }, [No_sample]);
+
+
+    // useEffect(() => {
+    //     // console.log("here");
+    // }, [list_sample])
     
+    const updatelist = (arr) => {
+        setSampleList(arr);
+    }
 
     const onGenerate = () => {
         const fixed_height = 75; // in vh
@@ -30,6 +40,9 @@ const Sorting = () => {
         setSampleList(temp_sample_list);
     }
 
+    const onSort = async() => {
+        await BubbleSort(list_sample, setSampleList, No_sample);
+    }
 
     const getRandomInteger = (min, max) => {
         return Math.floor(Math.random() * (max - min)) + min;
@@ -42,7 +55,8 @@ const Sorting = () => {
                 No_sample={No_sample} 
                 Algo={Algo} setAlgo={setAlgo} 
                 setSample={setSample}
-                onGenerate={onGenerate}/>
+                onGenerate={onGenerate}
+                onSort ={onSort}/>
         </>
     )
 }

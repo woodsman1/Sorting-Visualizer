@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ControlBar = ({No_sample, Algo, setAlgo, setSample, onGenerate}) => {
+const ControlBar = ({No_sample, Algo, setAlgo, setSample, onSort}) => {
 
     const sort_options =[
         "Bubble Sort",
@@ -23,6 +23,10 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample, onGenerate}) => {
 
     const setonGenerate = () =>{
         setSample(comp_sample);
+    }
+
+    const onClickSort = () => {
+        onSort();
     }
 
     return (
@@ -53,6 +57,7 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample, onGenerate}) => {
 
                 <div 
                     className="white-text same-horizon sort-button"
+                    onClick ={onClickSort}
                     >
                     <p > SORT </p>
                 </div>
