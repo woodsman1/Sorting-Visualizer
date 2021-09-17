@@ -3,6 +3,7 @@ function sleep(milliseconds) {
 } 
 
 var arr = [];
+var time = 20;
 
 const merge = async (st1, ed1, st2, ed2, setSampleList) => {
     let i = st1, j= st2;
@@ -19,7 +20,7 @@ const merge = async (st1, ed1, st2, ed2, setSampleList) => {
         }
 
         var temp_list = list.concat(arr.slice(i, ed1+1), arr.slice(j, ed2+1), arr.slice(ed2+1));
-        await sleep(20);
+        await sleep(time);
         setSampleList(temp_list);
     }
 
@@ -27,7 +28,7 @@ const merge = async (st1, ed1, st2, ed2, setSampleList) => {
         list.push(arr[i]);
         i++;
         var temp_list = list.concat(arr.slice(i, ed1+1) ,arr.slice(ed2+1));
-        await sleep(20);
+        await sleep(time);
         setSampleList(temp_list);
     }
 
@@ -35,7 +36,7 @@ const merge = async (st1, ed1, st2, ed2, setSampleList) => {
         list.push(arr[j]);
         j++;
         var temp_list = list.concat(arr.slice(j, ed2+1), arr.slice(ed2+1));
-        await sleep(20);
+        await sleep(time);
         setSampleList(temp_list);
     }
 
@@ -44,9 +45,7 @@ const merge = async (st1, ed1, st2, ed2, setSampleList) => {
 }
 
 
-
 const divide = async (st, ed, setSampleList) => {
-
     if(st >= ed) return;
     let mid  = st + Math.floor((ed - st)/2);
     
@@ -56,9 +55,7 @@ const divide = async (st, ed, setSampleList) => {
 }
 
 
-
 const MergeSort = async(list_sample, setSampleList, No_sample) => {
-    
     arr = list_sample.slice();
     await divide(0, No_sample-1, setSampleList);
 }

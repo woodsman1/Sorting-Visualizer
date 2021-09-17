@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BubbleSort } from './comp/algos/BubbleSort';
 import { MergeSort } from './comp/algos/MergeSort';
+import { QuickSort } from './comp/algos/QuickSort';
 import { SelectionSort } from './comp/algos/SelectionSort';
 import ControlBar from './comp/ControlBar';
 import VisualArea from './comp/VisualArea';
@@ -39,6 +40,7 @@ const Sorting = () => {
             await BubbleSort(list_sample, setSampleList, No_sample);
         }else if (index_Algo == 1){
             //Ouick sort
+            await QuickSort(list_sample, setSampleList, No_sample);
         }else if (index_Algo == 2){
             // merge sort
             await MergeSort(list_sample, setSampleList, No_sample);
