@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ControlBar = ({No_sample, Algo, setAlgo, setSample, onSort}) => {
+const ControlBar = ({No_sample, Algo, setAlgo, setSample, onSort, onGenerate}) => {
 
     const sort_options =[
         "Bubble Sort",
@@ -22,7 +22,10 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample, onSort}) => {
     }
 
     const setonGenerate = () =>{
-        setSample(comp_sample);
+        if(comp_sample != No_sample)
+            setSample(comp_sample);
+        else
+            onGenerate();
     }
 
     const onClickSort = () => {

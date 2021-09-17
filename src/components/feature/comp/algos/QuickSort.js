@@ -22,12 +22,8 @@ const decidePivot = async (st, ed) => {
 }
 
 const Partition = async (st, ed, setSampleList) => {
-    // let start_arr = arr.slice(0, st);
-    // let end_arr = arr.slice(ed);
 
     let pivot = await decidePivot(st, ed);
-
-    // console.log("decided : ", pivot)
 
     const temp = arr[ed];  // moving pivote to last
     arr[ed] = arr[pivot];
@@ -54,7 +50,7 @@ const Partition = async (st, ed, setSampleList) => {
         if(arr[right] > arr[ed]) right--;
     }
 
-    const temp2 = arr[left];  // swaping left and right
+    const temp2 = arr[left];  // swaping left and ed
     arr[left] = arr[ed];
     arr[ed] = temp2;
 
@@ -77,7 +73,6 @@ const quickSort = async (st, ed, setSampleList) => {
 
 const QuickSort = async(list_sample, setSampleList, No_sample) => {
     arr = list_sample.slice();
-
     await quickSort(0, No_sample-1, setSampleList);
 }
 
