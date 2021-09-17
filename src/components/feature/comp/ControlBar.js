@@ -49,7 +49,7 @@ const ControlBar = ({No_sample, Algo, setAlgo, setSample, onSort}) => {
                     <input 
                         type="range" 
                         className="form-range range-bar" 
-                        min="0" max="200" 
+                        min="10" max="150" 
                         id="customRange2" 
                         defaultValue={comp_sample}
                         onChange={changeRange}
