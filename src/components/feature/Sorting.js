@@ -13,14 +13,16 @@ const Sorting = () => {
     const [Algo, setAlgo] = useState(0);
     const [sampleWidth, setSampleWidth] = useState(92/100);
     const [list_sample, setSampleList] = useState([]);
+    const [inProcess, setinProcess] = useState(false);
 
     // use useEffect to generate samples
-    useEffect(() => {   
+    useEffect(() => {
         onGenerate();
     }, [No_sample]);
 
 
     const onGenerate = () => {
+        if(inProcess == true) return;
         const fixed_height = 75; // in vh
         const fixed_wieght = 92; // in percentage
 
@@ -35,7 +37,12 @@ const Sorting = () => {
     }
 
     const onSort = async(index_Algo) => {
+        if(inProcess==true) return;
+        
         console.log(index_Algo)
+
+        setinProcess(true);
+        
         if(index_Algo == 0){
             await BubbleSort(list_sample, setSampleList, No_sample);
         }else if (index_Algo == 1){
@@ -49,6 +56,8 @@ const Sorting = () => {
         }else{
             //heap sort
         }
+
+        setinProcess(false);
     }
 
     const getRandomInteger = (min, max) => {
