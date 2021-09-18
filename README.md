@@ -1,7 +1,7 @@
 # Sorting Visualizer
 A web application for visualizing the Sorting Algorithms like Bubble Sort, Heap Sort, Merge Sort, Quick Sort, Selection Sort. It is build using Reactjs, Javascript, HTML, CSS.
 
-* You and Visualize Algorithms at : https://woodsman1.github.io/Sorting-Visualizer/
+* You can Visualize Algorithms at : https://woodsman1.github.io/Sorting-Visualizer/
 
 ![](/demo.gif)
 
