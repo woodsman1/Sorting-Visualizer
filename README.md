@@ -1,5 +1,5 @@
 # Sorting Visualizer
-A web application for visualizing the Sorting Algorithms like Bubble Sort, Heap Sort, Merge Sort, Quick Sort, Selection Sort. It is build in Reactjs, Javascript, HTML, CSS.
+A web application for visualizing the Sorting Algorithms like Bubble Sort, Heap Sort, Merge Sort, Quick Sort, Selection Sort. It is build using Reactjs, Javascript, HTML, CSS.
 
 
 ![](/demo.gif)
