@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BubbleSort } from './comp/algos/BubbleSort';
+import { HeapSort } from './comp/algos/HeapSort';
 import { MergeSort } from './comp/algos/MergeSort';
 import { QuickSort } from './comp/algos/QuickSort';
 import { SelectionSort } from './comp/algos/SelectionSort';
@@ -9,7 +10,7 @@ import VisualArea from './comp/VisualArea';
 
 const Sorting = () => {
 
-    const [No_sample, setSample] = useState(100);
+    const [No_sample, setSample] = useState(75);
     const [Algo, setAlgo] = useState(0);
     const [sampleWidth, setSampleWidth] = useState(92/100);
     const [list_sample, setSampleList] = useState([]);
@@ -39,23 +40,14 @@ const Sorting = () => {
     const onSort = async(index_Algo) => {
         if(inProcess==true) return;
         
-        console.log(index_Algo)
-
         setinProcess(true);
         
-        if(index_Algo == 0){
-            await BubbleSort(list_sample, setSampleList, No_sample);
-        }else if (index_Algo == 1){
-            //Ouick sort
-            await QuickSort(list_sample, setSampleList, No_sample);
-        }else if (index_Algo == 2){
-            // merge sort
-            await MergeSort(list_sample, setSampleList, No_sample);
-        }else if(index_Algo == 3){
-            await SelectionSort(list_sample, setSampleList, No_sample);
-        }else{
-            //heap sort
-        }
+        if(index_Algo == 0) await BubbleSort(list_sample, setSampleList, No_sample);
+        else if (index_Algo == 1) await QuickSort(list_sample, setSampleList, No_sample);
+        else if (index_Algo == 2) await MergeSort(list_sample, setSampleList, No_sample);
+        else if(index_Algo == 3) await SelectionSort(list_sample, setSampleList, No_sample);
+        else await HeapSort(list_sample, setSampleList, No_sample);
+        
 
         setinProcess(false);
     }

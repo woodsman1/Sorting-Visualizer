@@ -3,7 +3,7 @@ function sleep(milliseconds) {
 } 
 
 var arr = [];
-var time = 20;
+var time = 10;
 
 const merge = async (st1, ed1, st2, ed2, setSampleList) => {
     let i = st1, j= st2;
