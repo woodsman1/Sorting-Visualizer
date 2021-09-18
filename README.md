@@ -21,3 +21,8 @@ npm start
 ```
 
 * Your application will start running at `http://localhost:3000/`
+
+
+## License
+
+Licensed uder the [MIT License](LICENSE).
